@@ -3,6 +3,7 @@ import OficinaComponente from './OficinaComponent';
 import OficinaForm from './OficinaForm';
 import './Menu.css';
 import React, { useState } from 'react';
+import CalculadoraIP from './CalculadoraIp';
 const Menu = () => {
     const [activeSection, setActiveSection] = useState(null);
 
@@ -30,6 +31,9 @@ const Menu = () => {
                     <a href="#form" onClick={() => handleMenuClick('form')}>
                         Oficina Form
                     </a>
+                    <a href="#calculadoraIp" onClick={() => handleMenuClick('calculadoraIp')}>
+                        Calculadora de IP
+                    </a>
                 </div>
             </div>
 
@@ -48,6 +52,11 @@ const Menu = () => {
                 {activeSection === 'form' && (
                     <section id="form">
                         <OficinaForm />
+                    </section>
+                )}
+                {activeSection === 'calculadoraIp' && (
+                    <section id="calculadoraIp">
+                        <CalculadoraIP />
                     </section>
                 )}
             </div>
