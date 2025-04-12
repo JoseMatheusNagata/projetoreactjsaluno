@@ -1,12 +1,17 @@
 /* Menu.css */
 
 .menu {
+    position: fixed; /* Fixa o menu no topo */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa toda a largura da tela */
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #227ce2;
     padding: 10px 20px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Pode ser removido, pois o menu fixo não afeta o fluxo */
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
 }
 
 .menu .logo {
